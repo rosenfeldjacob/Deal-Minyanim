@@ -2,7 +2,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiamFjb2Jyb3NlbmZlbGQiLCJhIjoiY2twbzVwNGJhMDdiN
 let description;
 if (typeof shulname !== 'undefined' && typeof minyantype !== 'undefined' && typeof minyantime !== 'undefined' && typeof address !== 'undefined') {
     // Check if nusach is 'edot hamizrach' and replace 'Shacharis' and 'Maariv' accordingly
-    if (nusach === 'edot hamizrach') {
+    if (nusach === 'Edot Hamizrach') {
         if (minyantype === 'Shacharis') {
             minyantype = 'Shacharit';
         } else if (minyantype === 'Maariv') {
