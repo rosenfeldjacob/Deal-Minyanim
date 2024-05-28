@@ -29,7 +29,7 @@ public class MinyanMapper implements RowMapper<Minyan>, Serializable {
         String startTimeCHRC = rs.getString("START_TIME_CHRC");
         String notes = rs.getString("NOTES");
         String nusach = rs.getString("NUSACH");
-        String orgColor = "#275ed8";
+        String orgColor = "#008EC6";
 
         return new Minyan(id, typeString, locationId, organizationId, enabled, startTime1, startTime2, startTime3, startTime4, startTime5, startTime6, startTime7, startTimeRC, startTimeYT, startTimeCH, startTimeCHRC,  notes, nusach, orgColor);
     }
@@ -53,7 +53,7 @@ public class MinyanMapper implements RowMapper<Minyan>, Serializable {
         String startTimeCHRC = (String) m.get("START_TIME_CHRC");
         String notes = (String) m.get("NOTES");
         String nusach = (String) m.get("NUSACH");
-        String orgColor = "#275ed8";
+        String orgColor = "#008EC6";
 
 
         return new Minyan(id, typeString, locationId, organizationId, enabled, startTime1, startTime2, startTime3, startTime4, startTime5, startTime6, startTime7, startTimeRC, startTimeYT, startTimeCH, startTimeCHRC, notes, nusach, orgColor);
