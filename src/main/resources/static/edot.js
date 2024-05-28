@@ -7,6 +7,7 @@ function replaceShacharis() {
   if (doc.innerHTML.includes('Edot Hamizrach')) {
     // Replace 'Shacharis' with 'Shacharit'
     doc.innerHTML = doc.innerHTML.replace(/Shacharis/g, 'Shacharit');
+    doc.innerHTML = doc.innerHTML.replace(/Maariv/g, 'Arvit');
   }
 }
 
