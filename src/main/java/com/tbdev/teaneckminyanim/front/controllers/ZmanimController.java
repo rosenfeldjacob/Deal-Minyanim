@@ -50,7 +50,7 @@ import org.codehaus.groovy.runtime.powerassert.SourceText;
 public class ZmanimController {
     TimeZone timeZone = TimeZone.getTimeZone("America/New_York");
 
-    String locationName = "Teaneck, NJ";
+    String locationName = "Deal, NJ";
     double latitude = 40.906871;
     double longitude = -74.020924;
     double elevation = 24;

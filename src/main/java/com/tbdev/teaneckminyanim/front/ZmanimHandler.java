@@ -24,10 +24,10 @@ public class ZmanimHandler {
 
     public ZmanimHandler() {
         TimeZone timeZone = TimeZone.getTimeZone("America/New_York");
-        String locationName = "Teaneck, NJ";
-        double latitude = 40.906871;
-        double longitude = -74.020924;
-        double elevation = 24;
+        String locationName = "Deal, NJ";
+        double latitude = 40.2523465;
+        double longitude = -74.001051;
+        double elevation = 30;
         GeoLocation geoLocation = new GeoLocation(locationName, latitude, longitude, elevation, timeZone);
         this.geoLocation = geoLocation;
     }
