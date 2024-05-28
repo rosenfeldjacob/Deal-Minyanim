@@ -1,15 +1,27 @@
-// Function to replace 'Shacharis' with 'Shacharit' if 'Edot Hamizrach' is present
-function replaceShacharis() {
-  // Get the entire HTML document
-  var doc = document.documentElement;
-
-  // Check if 'Edot Hamizrach' is in the document
-  if (doc.innerHTML.includes('Edot Hamizrach')) {
-    // Replace 'Shacharis' with 'Shacharit'
-    doc.innerHTML = doc.innerHTML.replace(/Shacharis/g, 'Shacharit');
-    doc.innerHTML = doc.innerHTML.replace(/Maariv/g, 'Arvit');
+// Function to replace 'Shacharis' with 'Shacharit' and 'Maariv' with 'Arvit' if 'Edot Hamizrach' is present
+function replacePrayerNames() {
+    // Get all text nodes in the document
+    var walker = document.createTreeWalker(
+      document.body,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
+    );
+  
+    // Define a function to check and replace text
+    function checkAndReplace(node) {
+      if (node.textContent.includes('Edot Hamizrach')) {
+        node.textContent = node.textContent.replace(/Shacharis/g, 'Shacharit').replace(/Maariv/g, 'Arvit');
+      }
+    }
+  
+    // Walk through the text nodes and replace as needed
+    var node;
+    while (node = walker.nextNode()) {
+      checkAndReplace(node);
+    }
   }
-}
-
-// Call the function to perform the replacement
-replaceShacharis();
+  
+  // Call the function to perform the replacement
+  replacePrayerNames();
+  
