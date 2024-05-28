@@ -1,10 +1,19 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiamFjb2Jyb3NlbmZlbGQiLCJhIjoiY2twbzVwNGJhMDdiNzJ4bzBtOGRzNjBjNSJ9.r8f10mthdHE69vYepqdq3Q';
 let description;
 if (typeof shulname !== 'undefined' && typeof minyantype !== 'undefined' && typeof minyantime !== 'undefined' && typeof address !== 'undefined') {
+    // Check if nusach is 'edot hamizrach' and replace 'Shacharis' and 'Maariv' accordingly
+    if (nusach === 'edot hamizrach') {
+        if (minyantype === 'Shacharis') {
+            minyantype = 'Shacharit';
+        } else if (minyantype === 'Maariv') {
+            minyantype = 'Arvit';
+        }
+    }
     description = "<h4>" + shulname + "</h4><p>Next Minyan Today: " + minyantype + " at " + minyantime + "</p><p>" + address + "</p>";
 } else {
     description = "<h4>" + shulname + "</h4><h5>There are no upcoming minyanim today.</h5><p>" + address + "</p>"
 }
+
 
 // Make the GET request to the Mapbox Geocoding API
 fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=${mapboxgl.accessToken}`)
