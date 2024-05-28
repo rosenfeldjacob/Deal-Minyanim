@@ -33,6 +33,7 @@
     var shulcolor = /*[[${org.getOrgColor()}]]*/ "";
     /*]]>*/
   </script>
+  <script type="text/javascript" src="/edot.js"></script>
   <script th:if="${upcoming != null}" th:inline="javascript">
     /*<![CDATA[*/
     var minyantype = /*[[${upcoming.getType().displayName()}]]*/ "";
@@ -99,7 +100,7 @@
                             <h2 th:style="'color: ' + ${org.getOrgColor()}" th:text="${org.getName()}"></h2>
                             <!-- <img src="assets/icons/free.png" width="60" alt="Icon"> -->
                             <ul>
-                              <li th:text="${org.getNusach().displayName()}"></li>
+                              <li class="org-nusach" th:text="${org.getNusach().displayName()}"></li>
                               <li th:text="${org.getAddress()}"></li>
                             </ul>
                             <button type="button" class="btn-next" th:style="'background: ' + ${org.getOrgColor()}"
