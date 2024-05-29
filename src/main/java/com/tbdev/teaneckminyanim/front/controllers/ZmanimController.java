@@ -177,7 +177,7 @@ public class ZmanimController {
         System.out.println("DEBUG: Putting zmanim in model");
 
         System.out.println("ALOT HASH: " + zmanim.get(Zman.ALOT_HASHACHAR));
-        System.out.println("netz: " + zmanim.get(Zman.NETZ));
+        System.out.println("NETZ HASH  " + zmanim.get(Zman.NETZ));
         mv.getModel().put("alotHashachar", timeFormatWithRoundingToSecond(zmanim.get(Zman.ALOT_HASHACHAR)));
         mv.getModel().put("ett", timeFormatWithRoundingToSecond(zmanim.get(Zman.ETT)));
         mv.getModel().put("netz", timeFormatWithRoundingToSecond(zmanim.get(Zman.NETZ)));
