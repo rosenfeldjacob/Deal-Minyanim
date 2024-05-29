@@ -9,12 +9,19 @@ function replacePrayerNames() {
     if (containsEdotHamizrach) {
       // Get all the table elements on the page
       var tables = document.getElementsByTagName('table');
+      var h4 = document.getElementsByTagName('h4');
   
       // Loop through each table
       for (var i = 0; i < tables.length; i++) {
         // Replace 'Shacharis' with 'Shacharit' and 'Maariv' with 'Arvit' in that table
         tables[i].innerHTML = tables[i].innerHTML.replace(/Shacharis/g, 'Shacharit').replace(/Maariv/g, 'Arvit');
       }
+
+      // Loop through each h4
+        for (var i = 0; i < h4.length; i++) {
+            // Replace 'Shacharis' with 'Shacharit' and 'Maariv' with 'Arvit' in that h4
+            h4[i].innerHTML = h4[i].innerHTML.replace(/Shacharis/g, 'Shacharit').replace(/Maariv/g, 'Arvit');
+        }
   
       // Get all the button elements on the page
       var buttons = document.getElementsByTagName('button');
